@@ -297,8 +297,6 @@ body.dark-theme footer {
     color: var(--footer-text-dark);
 }
 
-/* Project slider styles */
-
 /* New Project Cards Styles */
 .project-cards {
     display: grid;
@@ -394,12 +392,4 @@ body.dark-theme .project-card-content h4 {
     .about-card { flex-direction: column; align-items: center; padding: 1.2rem 0.7rem; gap: 1rem; }
     .about-avatar { font-size: 3rem; width: 60px; height: 60px; }
     .about-highlights { flex-direction: column; gap: 0.7rem; }
-    .slider { min-height: 220px; }
-    .slide img { max-height: 150px; }
-    .caption { padding: 10px; font-size: 0.95rem; }
-}
-@media (max-width: 600px) {
-    main { padding: 1rem; border-radius: 0; }
-    section { padding: 1rem 0.5rem; }
-    header, nav, footer { border-radius: 0; }
 }

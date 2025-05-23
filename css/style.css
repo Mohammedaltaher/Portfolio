@@ -257,31 +257,125 @@ body.dark-theme .skill-block {
 }
 
 /* Experience section */
+.experience-timeline {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ff1b6d; /* Accent color for the timeline */
+    border-radius: 2px;
+}
+
+body.dark-theme .experience-timeline::before {
+    background: var(--section-h3-dark);
+}
+
 .job {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #eee;
-    background: #fff;
-    color: #222;
+    margin-bottom: 40px;
+    padding-left: 50px; /* Space for the timeline dot and line */
+    position: relative;
+    background: transparent; /* Remove previous background */
+    border: none; /* Remove previous border */
 }
-body.dark-theme .job {
-    background: #181818;
-    border: 1px solid #222;
-    color: #fff;
+
+.job::before { /* Timeline dot */
+    content: '';
+    position: absolute;
+    left: 12px; /* (20px - (16px / 2)) - center the dot on the line */
+    top: 5px; /* Adjust vertical alignment */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--main-bg-light);
+    border: 3px solid #ff1b6d;
+    z-index: 1;
 }
+
+body.dark-theme .job::before {
+    background: var(--main-bg-dark);
+    border-color: var(--section-h3-dark);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
 .job h4 {
-    color: #ff1b6d;
-    margin: 0 0 10px 0;
+    color: var(--job-h4-light);
+    margin: 0;
+    font-size: 1.2rem;
 }
-.job span {
-    color: #666;
+
+body.dark-theme .job h4 {
+    color: var(--job-h4-dark);
+}
+
+.job-dates {
+    color: var(--job-span-light);
     font-size: 0.9em;
-    display: block;
-    margin-bottom: 15px;
+    font-style: italic;
 }
-body.dark-theme .job span {
-    color: #bbb;
+
+body.dark-theme .job-dates {
+    color: var(--job-span-dark);
+}
+
+.job-title {
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-color-light);
+}
+
+body.dark-theme .job-title {
+    color: var(--text-color-dark);
+}
+
+.job ul {
+    padding-left: 20px; /* Indent list items */
+    margin-top: 0.5rem;
+}
+
+.job li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Remove old .job span styling if it's no longer needed or conflicts */
+/* .job span { ... } */
+
+/* Responsive adjustments for timeline if needed */
+@media (max-width: 600px) {
+    .experience-timeline::before {
+        left: 10px;
+    }
+    .job {
+        padding-left: 35px;
+    }
+    .job::before {
+        left: 2px;
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+    }
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .job-dates {
+        margin-top: 0.25rem;
+    }
 }
 
 footer {

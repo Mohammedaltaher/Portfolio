@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Eltaher | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mohamed Eltaher</h1>
+            <h2>Full Stack Developer</h2>
+            <p>Sharjah, UAE | dev.eltaher@gmail.com | +971585199391</p>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#languages">Languages</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h3>About Me</h3>
+            <p>I'm a passionate Full Stack Developer specializing in building robust, scalable web applications. I love solving complex problems and delivering high-quality solutions for clients and users.</p>
+        </section>
+        <section id="projects">
+            <h3>Featured Projects</h3>
+            <div class="slider">
+                <button class="slide-btn prev">&#10094;</button>
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="images/project1.jpg" alt="Project 1">
+                        <div class="caption">
+                            <h4>NOC Management System</h4>
+                            <p>Dynamic system for construction approvals using microservices (MediatR, CQRS, RabbitMQ).</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/project2.jpg" alt="Project 2">
+                        <div class="caption">
+                            <h4>Ahoy Management Studio</h4>
+                            <p>SaaS platform for tracking and movement solutions, with Azure Cognitive Search integration.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/project3.jpg" alt="Project 3">
+                        <div class="caption">
+                            <h4>EDU PRO</h4>
+                            <p>Real-time information management system for educational institutions with 30+ modules.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slide-btn next">&#10095;</button>
+            </div>
+        </section>
+        <section id="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li><strong>Frontend:</strong> HTML, CSS, Blazor, JQuery, JSON, Angular, React, XML, AJAX, Bootstrap, Javascript</li>
+                <li><strong>Database:</strong> MSSQL, MongoDB, Dapper, MySQL, Entity Framework, ADO.NET, Cosmos DB, Oracle</li>
+                <li><strong>Backend:</strong> C#, ASP.NET Core, AspNet MVC, OOP, .NET, .NET Core, .NET Framework, Swagger, AspNet Core, WebForms, RESTful API</li>
+                <li><strong>Others:</strong> Unit Testing, NUnit, Moq, IIS, Git, TFS, GitHub, Azure</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h3>Professional Experience</h3>
+            <div class="job">
+                <h4>Department of Municipal Affairs - Sharjah</h4>
+                <span>Full Stack Developer | 11/2022 – present | Sharjah, UAE</span>
+                <ul>
+                    <li>Built a dynamic NOC management system for construction and building approvals using microservices architecture (MediatR, CQRS, RabbitMQ).</li>
+                    <li>Enabled efficient process control through an admin interface, simplifying service management across multiple municipalities.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Ahoy</h4>
+                <span>Backend Developer (.Net) | 04/2022 – 11/2022 | Dubai, UAE</span>
+                <ul>
+                    <li>Developed Ahoy Management Studio (AMS), a SaaS platform for tracking and movement solutions.</li>
+                    <li>Built APIs for point-of-interest indexing using Azure Cognitive Search, enhancing data retrieval speed and efficiency.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Dubai Civil Aviation Authority</h4>
+                <span>Backend Developer (.Net)</span>
+                <ul>
+                    <li>Developed the Dubai Civil Aviation Authority website and integrated with multiple government entities for process automation.</li>
+                    <li>Configured the EPMS ERP system and conducted training for end-users, providing comprehensive demos and user support.</li>
+                    <li>Leveraged Azure services (Bing Search, AI image processing) for internal systems, enhancing automation capabilities.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>Datamatix</h4>
+                <span>Backend Developer (.Net)</span>
+                <ul>
+                    <li>Designed a new ERP system for charitable organizations, using DDD-oriented microservices in ASP.NET Core.</li>
+                    <li>Implemented domain events using MediatR, integrated with Hangfire for CQRS scheduling, and applied SOLID principles for code optimization.</li>
+                    <li>Built resilient, scalable applications using an EventBus abstraction for asynchronous messaging with RabbitMQ, improving system reliability.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h4>HASH IT</h4>
+                <span>Full Stack Developer (.NET)</span>
+                <ul>
+                    <li>EDU PRO: A real-time information management system with over 30 modules for educational institutions.</li>
+                    <li>DENTAL.PRO: A system streamlining dental care and clinic operations.</li>
+                    <li>FINGER.PAY: A biometric payment system utilizing fingerprint authentication for secure transactions.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="education">
+            <h3>Education</h3>
+            <p>Bachelor in Computer Science, Alneelain University, Khartoum, Sudan</p>
+        </section>
+        <section id="languages">
+            <h3>Languages</h3>
+            <p>Arabic, English</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mohamed Eltaher. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

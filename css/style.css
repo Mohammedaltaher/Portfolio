@@ -38,31 +38,20 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: #0a0a0a;
-    color: var(--text-color-dark);
+    background: var(--background-color-light);
+    color: var(--text-color-light);
     transition: all 0.3s ease;
     overflow-x: hidden;
 }
 
 body.dark-theme {
-    --background-color-light: var(--background-color-dark);
-    --text-color-light: var(--text-color-dark);
-    --header-bg-light: var(--header-bg-dark);
-    --header-text-light: var(--header-text-dark);
-    --nav-bg-light: var(--nav-bg-dark);
-    --nav-text-light: var(--nav-text-dark);
-    --nav-hover-light: var(--nav-hover-dark);
-    --main-bg-light: var(--main-bg-dark);
-    --section-h3-light: var(--section-h3-dark);
-    --job-h4-light: var(--job-h4-dark);
-    --job-span-light: var(--job-span-dark);
-    --footer-bg-light: var(--footer-bg-dark);
-    --footer-text-light: var(--footer-text-dark);
+    background: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 header {
-    background: var(--header-bg-dark);
-    color: var(--header-text-dark);
+    background: var(--header-bg-light);
+    color: var(--header-text-light);
     padding: 2rem 0;
     text-align: center;
     position: relative;
@@ -78,7 +67,7 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-#theme-toggle {
+#theme-toggle, #theme-toggle-light {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -92,11 +81,22 @@ header {
     font-size: 1rem;
     box-shadow: 0 2px 8px rgba(40,53,147,0.10);
     transition: background 0.2s, color 0.2s, border 0.2s;
+    z-index: 10;
 }
-#theme-toggle:hover {
+#theme-toggle:hover, #theme-toggle-light:hover {
     background: var(--nav-hover-light);
     color: #fff;
     border-color: var(--nav-hover-light);
+}
+body.dark-theme #theme-toggle, body.dark-theme #theme-toggle-light {
+    background-color: var(--main-bg-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--text-color-dark);
+}
+body.dark-theme #theme-toggle:hover, body.dark-theme #theme-toggle-light:hover {
+    background: var(--nav-hover-dark);
+    color: #fff;
+    border-color: var(--nav-hover-dark);
 }
 
 header h1 {
@@ -113,7 +113,8 @@ header p {
     font-size: 1rem;
 }
 nav {
-    background: var(--nav-bg-dark);
+    background: var(--nav-bg-light);
+    color: var(--nav-text-light);
     padding: 15px;
     margin: 20px;
     border-radius: 15px;
@@ -163,7 +164,8 @@ main {
 }
 
 section {
-    background: var(--main-bg-dark);
+    background: var(--main-bg-light);
+    color: var(--text-color-light);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
@@ -207,9 +209,9 @@ li {
 .job {
     margin-bottom: 30px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    /* background and color are now handled by theme variables */
 }
 
 .job h4 {
@@ -225,14 +227,34 @@ li {
 }
 
 footer {
-    background: var(--footer-bg-dark);
-    color: var(--footer-text-dark);
+    background: var(--footer-bg-light);
+    color: var(--footer-text-light);
     text-align: center;
     padding: 20px;
     margin: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme header {
+    background: var(--header-bg-dark);
+    color: var(--header-text-dark);
+}
+
+body.dark-theme nav {
+    background: var(--nav-bg-dark);
+    color: var(--nav-text-dark);
+}
+
+body.dark-theme main, body.dark-theme section {
+    background: var(--main-bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme footer {
+    background: var(--footer-bg-dark);
+    color: var(--footer-text-dark);
 }
 
 /* Header flex alignment for single-line info */
@@ -351,7 +373,8 @@ section:nth-child(5) { animation-delay: 1s; }
 
 /* Navigation styles */
 nav {
-    background: var(--nav-bg-dark);
+    background: var(--nav-bg-light);
+    color: var(--nav-text-light);
     padding: 15px;
     margin: 20px;
     border-radius: 15px;
@@ -403,7 +426,8 @@ main {
 }
 
 section {
-    background: var(--main-bg-dark);
+    background: var(--main-bg-light);
+    color: var(--text-color-light);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
@@ -535,9 +559,9 @@ section:hover {
 .job {
     margin-bottom: 30px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    /* background and color are now handled by theme variables */
 }
 
 .job h4 {
@@ -554,8 +578,8 @@ section:hover {
 
 /* Footer styles */
 footer {
-    background: var(--footer-bg-dark);
-    color: var(--footer-text-dark);
+    background: var(--footer-bg-light);
+    color: var(--footer-text-light);
     text-align: center;
     padding: 20px;
     margin: 20px;
@@ -569,14 +593,20 @@ footer {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-    background: rgba(255,255,255,0.04);
+    background: #fff;
     border-radius: 18px;
     padding: 2rem 1.5rem;
     box-shadow: 0 2px 12px rgba(40,53,147,0.08);
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(40,53,147,0.08);
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
     animation: fadeInUp 1s;
+    color: #222;
+}
+body.dark-theme .about-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #fff;
 }
 .about-avatar {
     flex-shrink: 0;
@@ -585,20 +615,23 @@ footer {
     justify-content: center;
     font-size: 4rem;
     color: #ff1b6d;
-    background: rgba(255,255,255,0.08);
+    background: #f4f6f8;
     border-radius: 50%;
     width: 80px;
     height: 80px;
     box-shadow: 0 2px 8px rgba(40,53,147,0.10);
 }
-.about-content {
-    flex: 1;
+body.dark-theme .about-avatar {
+    background: rgba(255,255,255,0.08);
 }
 .about-content p {
     font-size: 1.1rem;
     margin: 0 0 1rem 0;
-    color: #fff;
+    color: #222;
     line-height: 1.7;
+}
+body.dark-theme .about-content p {
+    color: #fff;
 }
 .about-highlights {
     list-style: none;

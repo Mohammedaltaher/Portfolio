@@ -16,43 +16,38 @@ navLinks.forEach(link => {
 
 // Theme toggle functionality with improved UI
 const themeToggle = document.getElementById('theme-toggle');
+const themeToggleLight = document.getElementById('theme-toggle-light');
 const body = document.body;
 
 // Function to apply the saved theme on page load
 const applySavedTheme = () => {
     const savedTheme = localStorage.getItem('theme');
-    const themeIcon = themeToggle.querySelector('i');
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        themeToggle.style.display = 'none';
+        themeToggleLight.style.display = 'inline-block';
     } else {
         body.classList.remove('dark-theme');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+        themeToggle.style.display = 'inline-block';
+        themeToggleLight.style.display = 'none';
     }
 };
 
-// Event listener for the theme toggle button
-themeToggle.addEventListener('click', () => {
-    const themeIcon = themeToggle.querySelector('i');
-    body.classList.toggle('dark-theme');
-    if (body.classList.contains('dark-theme')) {
+// Event listeners for the theme toggle buttons
+if (themeToggle && themeToggleLight) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.add('dark-theme');
         localStorage.setItem('theme', 'dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
+        themeToggle.style.display = 'none';
+        themeToggleLight.style.display = 'inline-block';
+    });
+    themeToggleLight.addEventListener('click', () => {
+        body.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-    }
-    
-    // Add animation to the icon
-    themeIcon.style.animation = 'rotate 0.5s ease';
-    setTimeout(() => {
-        themeIcon.style.animation = '';
-    }, 500);
-});
+        themeToggle.style.display = 'inline-block';
+        themeToggleLight.style.display = 'none';
+    });
+}
 
 // Apply the saved theme when the script loads
 applySavedTheme();

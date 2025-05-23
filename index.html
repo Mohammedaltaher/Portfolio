@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Mohamed Eltaher | Full Stack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Eltaher | Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Portfolio of Mohamed Eltaher - Full Stack Developer specializing in .NET, Azure, and modern web technologies">
+    <meta name="description"
+        content="Portfolio of Mohamed Eltaher - Full Stack Developer specializing in .NET, Azure, and modern web technologies">
 </head>
-<body>    <header>
-        <div class="container">
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-            <h1>Mohamed Eltaher</h1>
-            <h2>Full Stack Developer</h2>
-            <p>
-                <i class="fas fa-map-marker-alt"></i> Sharjah, UAE |
-                <i class="fas fa-envelope"></i> dev.eltaher@gmail.com |
-                <i class="fas fa-phone"></i> +971585199391
-            </p>
-            <div class="social-links">
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="header-info">
+                <h1>Mohamed Eltaher</h1>
+                <span class="divider">|</span>
+                <h2>Full Stack Developer</h2>
+                <span class="divider">|</span>
+                <span><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</span>
+                <span class="divider">|</span>
+                <span><i class="fas fa-envelope"></i> dev.eltaher@gmail.com</span>
+                <span class="divider">|</span>
+                <span><i class="fas fa-phone"></i> +971585199391</span>
+                <span class="divider">|</span>
+                <span class="social-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </span>
             </div>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
         </div>
     </header>
     <nav>
@@ -40,7 +52,12 @@
     <main>
         <section id="about">
             <h3>About Me</h3>
-            <p>I am a results-driven Full Stack Developer with extensive experience in building enterprise-level web applications using .NET Core, Azure, and modern JavaScript frameworks. With a strong foundation in software architecture and microservices, I specialize in delivering scalable, high-performance solutions that drive business growth. My expertise spans from designing robust backend systems to creating intuitive user interfaces, complemented by a deep commitment to clean code practices and continuous learning.</p>
+            <p>I am a results-driven Full Stack Developer with extensive experience in building enterprise-level web
+                applications using .NET Core, Azure, and modern JavaScript frameworks. With a strong foundation in
+                software architecture and microservices, I specialize in delivering scalable, high-performance solutions
+                that drive business growth. My expertise spans from designing robust backend systems to creating
+                intuitive user interfaces, complemented by a deep commitment to clean code practices and continuous
+                learning.</p>
         </section>
         <section id="projects">
             <h3>Featured Projects</h3>
@@ -51,21 +68,24 @@
                         <img src="images/project2.png" alt="Project 1">
                         <div class="caption">
                             <h4>NOC Management System</h4>
-                            <p>Dynamic system for construction approvals using microservices (MediatR, CQRS, RabbitMQ).</p>
+                            <p>Dynamic system for construction approvals using microservices (MediatR, CQRS, RabbitMQ).
+                            </p>
                         </div>
                     </div>
                     <div class="slide">
                         <img src="images/project2.png" alt="Project 2">
                         <div class="caption">
                             <h4>Ahoy Management Studio</h4>
-                            <p>SaaS platform for tracking and movement solutions, with Azure Cognitive Search integration.</p>
+                            <p>SaaS platform for tracking and movement solutions, with Azure Cognitive Search
+                                integration.</p>
                         </div>
                     </div>
                     <div class="slide">
                         <img src="images/project2.png" alt="Project 3">
                         <div class="caption">
                             <h4>EDU PRO</h4>
-                            <p>Real-time information management system for educational institutions with 30+ modules.</p>
+                            <p>Real-time information management system for educational institutions with 30+ modules.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -74,14 +94,60 @@
         </section>
         <section id="skills">
             <h3>Technical Expertise</h3>
-            <ul>
-                <li><strong>Frontend Development:</strong> Modern HTML5, CSS3/SASS, Blazor, React.js, Angular, TypeScript, JavaScript (ES6+), Bootstrap 5, Material UI, Redux, REST/GraphQL integration</li>
-                <li><strong>Database & ORM:</strong> SQL Server, MongoDB, Azure Cosmos DB, Oracle, Entity Framework Core, Dapper, Database Design & Optimization, Query Performance Tuning</li>
-                <li><strong>Backend Development:</strong> C# (.NET 6/7), ASP.NET Core MVC/Web API, Microservices Architecture, Domain-Driven Design, CQRS Pattern, Clean Architecture, RESTful API Design</li>
-                <li><strong>Cloud & DevOps:</strong> Azure (App Services, Functions, Service Bus), CI/CD Pipelines, Docker, Kubernetes, Azure DevOps, Git Flow, IIS Configuration</li>
-                <li><strong>Testing & Quality:</strong> Unit Testing (NUnit, xUnit), Integration Testing, Moq, Test-Driven Development (TDD), Code Review, Static Code Analysis</li>
-                <li><strong>Architecture Patterns:</strong> Microservices, Event-Driven Architecture, Repository Pattern, SOLID Principles, Design Patterns, Message Queue Systems (RabbitMQ)</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-block">
+                    <h4><i class="fas fa-laptop-code"></i> Frontend Development</h4>
+                    <ul>
+                        <li>Modern HTML5, CSS3/SASS</li>
+                        <li>Blazor, React.js, Angular</li>
+                        <li>TypeScript, JavaScript (ES6+)</li>
+                        <li>Bootstrap 5, Material UI, Redux</li>
+                        <li>REST/GraphQL integration</li>
+                    </ul>
+                </div>
+                <div class="skill-block">
+                    <h4><i class="fas fa-database"></i> Database & ORM</h4>
+                    <ul>
+                        <li>SQL Server, MongoDB, Azure Cosmos DB, Oracle</li>
+                        <li>Entity Framework Core, Dapper</li>
+                        <li>Database Design & Optimization</li>
+                        <li>Query Performance Tuning</li>
+                    </ul>
+                </div>
+                <div class="skill-block">
+                    <h4><i class="fas fa-server"></i> Backend Development</h4>
+                    <ul>
+                        <li>C# (.NET 6/7), ASP.NET Core MVC/Web API</li>
+                        <li>Microservices Architecture</li>
+                        <li>Domain-Driven Design, CQRS Pattern</li>
+                        <li>Clean Architecture, RESTful API Design</li>
+                    </ul>
+                </div>
+                <div class="skill-block">
+                    <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                    <ul>
+                        <li>Azure (App Services, Functions, Service Bus)</li>
+                        <li>CI/CD Pipelines, Docker, Kubernetes</li>
+                        <li>Azure DevOps, Git Flow, IIS Configuration</li>
+                    </ul>
+                </div>
+                <div class="skill-block">
+                    <h4><i class="fas fa-vial"></i> Testing & Quality</h4>
+                    <ul>
+                        <li>Unit Testing (NUnit, xUnit), Integration Testing, Moq</li>
+                        <li>Test-Driven Development (TDD)</li>
+                        <li>Code Review, Static Code Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-block">
+                    <h4><i class="fas fa-cubes"></i> Architecture Patterns</h4>
+                    <ul>
+                        <li>Microservices, Event-Driven Architecture</li>
+                        <li>Repository Pattern, SOLID Principles</li>
+                        <li>Design Patterns, Message Queue Systems (RabbitMQ)</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section id="experience">
             <h3>Professional Experience</h3>
@@ -89,50 +155,69 @@
                 <h4>Department of Municipal Affairs - Sharjah</h4>
                 <span>Senior Full Stack Developer | 11/2022 – present | Sharjah, UAE</span>
                 <ul>
-                    <li>Architected and implemented a mission-critical NOC management system handling 10,000+ monthly construction approvals, reducing processing time by 60% through microservices implementation</li>
-                    <li>Led the development of a distributed system using Event-Driven Architecture with RabbitMQ, achieving 99.9% system reliability</li>
-                    <li>Implemented CQRS pattern with MediatR, resulting in 40% improved application performance and better separation of concerns</li>
-                    <li>Mentored junior developers and established coding standards, increasing team productivity by 35%</li>
+                    <li>Architected and implemented a mission-critical NOC management system handling 10,000+ monthly
+                        construction approvals, reducing processing time by 60% through microservices implementation
+                    </li>
+                    <li>Led the development of a distributed system using Event-Driven Architecture with RabbitMQ,
+                        achieving 99.9% system reliability</li>
+                    <li>Implemented CQRS pattern with MediatR, resulting in 40% improved application performance and
+                        better separation of concerns</li>
+                    <li>Mentored junior developers and established coding standards, increasing team productivity by 35%
+                    </li>
                 </ul>
             </div>
             <div class="job">
                 <h4>Ahoy</h4>
                 <span>Senior Backend Developer (.NET) | 04/2022 – 11/2022 | Dubai, UAE</span>
                 <ul>
-                    <li>Spearheaded the development of Ahoy Management Studio (AMS), a high-performance SaaS platform serving 50,000+ daily active users</li>
-                    <li>Engineered an advanced search system using Azure Cognitive Search, reducing query response time by 75%</li>
+                    <li>Spearheaded the development of Ahoy Management Studio (AMS), a high-performance SaaS platform
+                        serving 50,000+ daily active users</li>
+                    <li>Engineered an advanced search system using Azure Cognitive Search, reducing query response time
+                        by 75%</li>
                     <li>Implemented real-time tracking features using SignalR, handling 1M+ concurrent connections</li>
-                    <li>Optimized database performance through advanced indexing and query optimization, resulting in 50% faster data retrieval</li>
+                    <li>Optimized database performance through advanced indexing and query optimization, resulting in
+                        50% faster data retrieval</li>
                 </ul>
             </div>
             <div class="job">
                 <h4>Dubai Civil Aviation Authority</h4>
                 <span>Full Stack Developer (.NET) | Dubai, UAE</span>
                 <ul>
-                    <li>Developed and launched a comprehensive portal integrating 15+ government entities, automating 95% of manual processes</li>
-                    <li>Implemented Azure AI services for automated document processing, reducing processing time from days to minutes</li>
+                    <li>Developed and launched a comprehensive portal integrating 15+ government entities, automating
+                        95% of manual processes</li>
+                    <li>Implemented Azure AI services for automated document processing, reducing processing time from
+                        days to minutes</li>
                     <li>Designed and implemented RESTful APIs serving 100,000+ monthly requests with 99.9% uptime</li>
-                    <li>Led the migration of legacy systems to modern cloud architecture, resulting in 45% cost reduction</li>
+                    <li>Led the migration of legacy systems to modern cloud architecture, resulting in 45% cost
+                        reduction</li>
                 </ul>
             </div>
             <div class="job">
                 <h4>Datamatix</h4>
                 <span>Full Stack Developer (.NET)</span>
                 <ul>
-                    <li>Architected a scalable ERP system using Domain-Driven Design and microservices, supporting 1000+ concurrent users</li>
-                    <li>Implemented event-sourcing using MediatR and RabbitMQ, achieving consistent system performance under high load</li>
-                    <li>Designed and implemented a modular architecture following SOLID principles, reducing maintenance costs by 40%</li>
-                    <li>Integrated Hangfire for background job processing, handling 100,000+ daily scheduled tasks with 99.9% reliability</li>
+                    <li>Architected a scalable ERP system using Domain-Driven Design and microservices, supporting 1000+
+                        concurrent users</li>
+                    <li>Implemented event-sourcing using MediatR and RabbitMQ, achieving consistent system performance
+                        under high load</li>
+                    <li>Designed and implemented a modular architecture following SOLID principles, reducing maintenance
+                        costs by 40%</li>
+                    <li>Integrated Hangfire for background job processing, handling 100,000+ daily scheduled tasks with
+                        99.9% reliability</li>
                 </ul>
             </div>
             <div class="job">
                 <h4>HASH IT</h4>
                 <span>Full Stack Developer (.NET)</span>
                 <ul>
-                    <li>Developed EDU PRO platform serving 50+ educational institutions, managing 100,000+ student records with 30+ integrated modules</li>
-                    <li>Built DENTAL.PRO system processing 5000+ daily appointments across multiple clinics with 99% user satisfaction</li>
-                    <li>Engineered FINGER.PAY, a secure biometric payment system handling $1M+ monthly transactions with zero security incidents</li>
-                    <li>Implemented real-time reporting and analytics features, reducing manual reporting effort by 80%</li>
+                    <li>Developed EDU PRO platform serving 50+ educational institutions, managing 100,000+ student
+                        records with 30+ integrated modules</li>
+                    <li>Built DENTAL.PRO system processing 5000+ daily appointments across multiple clinics with 99%
+                        user satisfaction</li>
+                    <li>Engineered FINGER.PAY, a secure biometric payment system handling $1M+ monthly transactions with
+                        zero security incidents</li>
+                    <li>Implemented real-time reporting and analytics features, reducing manual reporting effort by 80%
+                    </li>
                 </ul>
             </div>
         </section>
@@ -144,7 +229,8 @@
                 <ul>
                     <li>Graduated with First Class Honors</li>
                     <li>Specialized in Software Engineering and Distributed Systems</li>
-                    <li>Final Year Project: Distributed Healthcare Management System using Microservices Architecture</li>
+                    <li>Final Year Project: Distributed Healthcare Management System using Microservices Architecture
+                    </li>
                 </ul>
             </div>
             <div class="certifications">
@@ -166,4 +252,5 @@
     </footer>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -51,32 +51,3 @@ if (themeToggle && themeToggleLight) {
 
 // Apply the saved theme when the script loads
 applySavedTheme();
-
-// Slider functionality for Projects section
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.slide-btn.prev');
-const nextBtn = document.querySelector('.slide-btn.next');
-let currentSlide = 0;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-}
-
-prevBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-});
-
-nextBtn.addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-});
-
-// Optional: Auto-slide every 6 seconds
-// setInterval(() => {
-//     nextBtn.click();
-// }, 6000);
-
-showSlide(currentSlide);
